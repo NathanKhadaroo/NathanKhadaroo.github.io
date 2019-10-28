@@ -1,112 +1,100 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Programming for social scientists coursework, 2 Column</title>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/custom.css" rel="stylesheet">
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
 </head>
+<body>
 
+<header>
+  <h2>Nathan Khadaroo</h2>
+</header>
 
-<TITLE> Nathan Khadaroo/Homepage </TITLE>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">About me</a></li>
+      <li><a href="#">The code</a></li>
+      <li><a href="#">How to run the code</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Introduction</h1>
+    <p>This website was built as part of the GEOG 5995 module at the University of Leeds.</p>
+    <p>The code can accessed at my <a href="https://github.com/NathanKhadaroo/GEOG5995">GitHub page</a>, or in the code section of this website.</p>		
 
-<BODY>
+  </article>
+</section>
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Logo and responsive toggle -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                	<span class="glyphicon glyphicon-fire"></span> 
-                	Logo
-                </a>
-            </div>
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">Portfolio</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            
-        </div>
-    </nav>
+<footer>
+  <p>nathan.khadaroo@postgrad.manchester.ac.uk</p>
+</footer>
 
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">CDT Coursework
-                    <small>Programming for social science</small>
-                </h1>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                </a>
-                <h3>
-                    <a href="#">Biography</a>
-                </h3>
-                <p>Some fun facts about me.</p>
-            </div>
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                </a>
-                <h3>
-                    <a href="#">Project Title</a>
-                </h3>
-                <p>Idk a picture of me or something.</p>
-            </div>
-        </div>
-    </div>
-
-	<footer>
-		<div class="footer-blurb">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4 footer-blurb-item">
-						<img class="img-circle" src="https://blog.britishmuseum.org/wp-content/uploads/2019/01/The-Scream-blog-featured-crop.jpg" alt="" width="100" height="100">
-						<h3>My Github</h3>
-						<p>Click this button to access my github page.</p>
-						<p><a class="btn btn-primary" href="https://github.com/NathanKhadaroo">Github</a></p>
-					</div>
-					<div class="col-sm-4 footer-blurb-item">
-						<img class="img-circle" src="https://pbs.twimg.com/profile_images/1047767772594409472/ufZKysTs_400x400.jpg"" alt="" width="100" height="100">
-						<h3>CDT Website</h3>
-						<p>The CDT Data Analytics and Soceity website.</p>
-						<p><a class="btn btn-primary" href="https://datacdt.org/">CDT</a></p>
-
-				</div>
-			</div>
-        </div>
-	</footer>
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-</BODY>
-</HTML>
+</body>
+</html>
